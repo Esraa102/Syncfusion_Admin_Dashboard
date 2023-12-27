@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply flex gap-4 items-center my-3 px-2 py-3 text-gray-500 dark:text-gray-200 transition hover:text-black rounded-md hover:bg-light-gray dark:hover:bg-gray-500 capitalize text-lg font-semibold;
+  }
+  .hero {
+    @apply bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-4 pt-9 m-3 
+    bg-cover bg-center bg-hero-pattern;
+  }
+  .section {
+    @apply p-2 md:p-10 m-2 mt-24 md:m-10 bg-white  rounded-3xl;
+  }
+  .popup {
+    @apply fixed p-3 top-[80px] right-8 md:right-10 w-[90%] md:w-[400px] h-[600px]
+    bg-white dark:bg-secondary-dark-bg   
+    overflow-y-auto rounded-lg border dark:border-gray-400;
+  }
+}
+
+img[alt="employee"] {
+  width: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
